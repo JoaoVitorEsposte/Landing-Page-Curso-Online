@@ -1,0 +1,71 @@
+body, * {
+	font-family: 'Roboto', sans-serif;
+}
+
+.cabecalho {
+	font-size: 4em;
+	font-weight: bold;
+	position: relative;
+	width: 70%;
+	min-height: 160px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.4em;
+	padding: 0.2em;
+}
+
+h1 {
+	position: absolute;
+	left: 10;
+}
+
+.texto-especial-gradiente {
+	font-size: 1.3em;
+	background: linear-gradient(to right, darkblue, rgba(100,180,215, 0.8));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.caixa-padrao-conteudo {
+	position: relative;
+	margin: 0 auto;
+	width: 70%;
+	height: 510px;
+	padding: 0.5em;
+}
+
+.compra-curso {
+	position: absolute;
+	top: 0.5em;
+	left: 40%;
+	background-color: lime;
+	font-size: 1.6em;
+	text-align: center;
+	width: 150px;
+	border-radius: 10px;
+	padding: 0.2em;
+	margin: 0.7em;
+	border-width: 3px;
+}
+
+.texto-padrao {
+	position: absolute;
+	margin-top: 140px;
+	font-size: 2em;
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+.titulo-padrao {
+	position: absolute;
+	top: 140px;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: justify;
+	line-height: 1em;
+}
+
+.texto-padrao:first-letter {
+	margin-left: 70px;
+}
