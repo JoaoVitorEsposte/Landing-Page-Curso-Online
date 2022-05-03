@@ -1,5 +1,27 @@
+:root {
+	--bg-color-main: rgba(0,0,0, 0.85);
+	--bg-color-compra-curso: rgba(70,255,120, 0.795);
+	--color-compra-curso: rebeccapurple;
+	--text-color: rgb(110, 170, 230);
+	--bg-especial-gradiente: linear-gradient(to right, rebeccapurple, rgba(100,180,215, 0.8));
+}
+
 body, * {
 	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: var(--bg-color-main);
+}
+
+.grade-completa {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.texto-padrao, .titulo-padrao, .cabecalho h1, .duvida-resposta, .lista-equipamentos {
+	color: var(--text-color);
 }
 
 .cabecalho {
@@ -21,7 +43,7 @@ h1 {
 
 .texto-especial-gradiente {
 	font-size: 1.3em;
-	background: linear-gradient(to right, darkblue, rgba(100,180,215, 0.8));
+	background: var(--bg-especial-gradiente);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -39,31 +61,36 @@ h1 {
 	position: absolute;
 	top: 0.5em;
 	left: 40%;
-	background-color: lime;
+	background-color: var(--bg-color-compra-curso);
 	font-size: 1.6em;
 	text-align: center;
-	width: 150px;
+	width: 270px;
+	height: 70px;
 	border-radius: 10px;
 	padding: 0.2em;
 	margin: 0.7em;
 	border-width: 3px;
-}
-
-.texto-padrao {
-	position: absolute;
-	margin-top: 140px;
-	font-size: 2em;
-	line-height: 1.4em;
-	text-align: justify;
+	color: var(--color-compra-curso);
+	font-weight: bold;
 }
 
 .titulo-padrao {
 	position: absolute;
 	top: 140px;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: bold;
 	text-align: justify;
-	line-height: 1em;
+	line-height: 1.7em;
+}
+
+.texto-padrao {
+	font-size: 2em;
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+em {
+	font-style: italic;
 }
 
 .texto-padrao:first-letter {
