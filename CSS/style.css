@@ -15,9 +15,19 @@ body {
 }
 
 .grade-completa {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr, 5fr, 1fr;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	grid-gap: 40px;
 	width: 100%;
+}
+
+header {
+	grid-area: header;
 }
 
 .texto-padrao, .titulo-padrao, .cabecalho h1, .duvida-resposta, .lista-equipamentos {
@@ -49,12 +59,30 @@ h1 {
 	-webkit-text-fill-color: transparent;
 }
 
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-rows: 1fr, 0.7fr, 3fr, 1fr, 3fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"primeiro-main"
+	"segundo-main"
+	"terceiro-main"
+	"quarto-main"
+	"quinto-main";
+	grid-gap: 30px;
+}
+
 .caixa-padrao-conteudo {
 	position: relative;
 	margin: 0 auto;
 	width: 70%;
 	height: 510px;
 	padding: 0.5em;
+}
+
+.primeiro-main {
+	grid-area: primeiro-main;
 }
 
 .compra-curso {
@@ -89,10 +117,37 @@ h1 {
 	text-align: justify;
 }
 
+.texto-padrao:first-letter {
+	margin-left: 70px;
+}
+
 em {
 	font-style: italic;
 }
 
-.texto-padrao:first-letter {
-	margin-left: 70px;
+.segundo-main {
+	grid-area: segundo-main;
+}
+
+.grade-duvidas-respostas {
+	display: grid;
+	grid-gap: 20px;
+}
+
+.terceiro-main {
+	grid-area: terceiro-main;
+}
+
+.quarto-main {
+	grid-area: quarto-main;
+}
+
+.quinto-main {
+	grid-area: quinto-main;
+}
+
+
+
+footer {
+	grid-area: footer;
 }
