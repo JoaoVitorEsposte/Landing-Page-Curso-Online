@@ -2,8 +2,9 @@
 	--bg-color-main: rgba(0,0,0, 0.85);
 	--bg-color-compra-curso: rgba(70,255,120, 0.795);
 	--color-compra-curso: rebeccapurple;
-	--text-color: rgb(110, 170, 230);
-	--bg-especial-gradiente: linear-gradient(to right, rebeccapurple, rgba(100,180,215, 0.8));
+	--text-color: rgb(100,180,215);
+	--bg-especial-gradiente: linear-gradient(to right, rebeccapurple, rgba(100,180,215));
+	--bg-especial-gradiente-reverso: linear-gradient(to left, rebeccapurple, rgba(100,180,215));
 }
 
 body, * {
@@ -17,17 +18,22 @@ body {
 .grade-completa {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 1fr, 5fr, 1fr;
-	grid-template-areas: 
+	grid-template-rows: repeat(auto-fill, auto);
+	/**grid-template-areas: 
 	"header"
 	"main"
-	"footer";
+	"footer";**/
 	grid-gap: 40px;
 	width: 100%;
 }
 
 header {
-	grid-area: header;
+	/**grid-area: header;**/
+	position: relative;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	line-height: normal;
 }
 
 .texto-padrao, .titulo-padrao, .cabecalho h1, .duvida-resposta, .lista-equipamentos {
@@ -42,13 +48,8 @@ header {
 	min-height: 160px;
 	margin: 0 auto;
 	text-align: center;
-	line-height: 1.4em;
 	padding: 0.2em;
-}
-
-h1 {
-	position: absolute;
-	left: 10;
+	line-height: 1.3em;
 }
 
 .texto-especial-gradiente {
@@ -59,17 +60,25 @@ h1 {
 	-webkit-text-fill-color: transparent;
 }
 
+.texto-especial-gradiente-reverso {
+	background: var(--bg-especial-gradiente-reverso);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 main {
-	grid-area: main;
+	/**grid-area: main;**/
 	display: grid;
-	grid-template-rows: 1fr, 0.7fr, 3fr, 1fr, 3fr;
+	/**grid-template-rows: 1fr 0.7fr 3fr 1fr 3fr;**/
+	grid-template-rows: repeat(auto-fill, auto);
 	grid-template-columns: 1fr;
-	grid-template-areas: 
+	/*grid-template-areas: 
 	"primeiro-main"
 	"segundo-main"
 	"terceiro-main"
 	"quarto-main"
-	"quinto-main";
+	"quinto-main";*/
 	grid-gap: 30px;
 }
 
@@ -82,11 +91,11 @@ main {
 }
 
 .primeiro-main {
-	grid-area: primeiro-main;
+	/*grid-area: primeiro-main;*/
 }
 
 .compra-curso {
-	position: absolute;
+	position: relative;
 	top: 0.5em;
 	left: 40%;
 	background-color: var(--bg-color-compra-curso);
@@ -100,6 +109,11 @@ main {
 	border-width: 3px;
 	color: var(--color-compra-curso);
 	font-weight: bold;
+	transition: 0.2s all;
+}
+
+.compra-curso:active {
+	transform: scale(0.96);
 }
 
 .titulo-padrao {
@@ -126,7 +140,7 @@ em {
 }
 
 .segundo-main {
-	grid-area: segundo-main;
+	/**grid-area: segundo-main;*/
 }
 
 .grade-duvidas-respostas {
@@ -135,19 +149,19 @@ em {
 }
 
 .terceiro-main {
-	grid-area: terceiro-main;
+	/*grid-area: terceiro-main;*/
 }
 
 .quarto-main {
-	grid-area: quarto-main;
+	/*grid-area: quarto-main;*/
 }
 
 .quinto-main {
-	grid-area: quinto-main;
+	/*grid-area: quinto-main;*/
 }
 
 
 
 footer {
-	grid-area: footer;
+	/**grid-area: footer;**/
 }
