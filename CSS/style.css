@@ -109,11 +109,11 @@ main {
 	border-width: 3px;
 	color: var(--color-compra-curso);
 	font-weight: bold;
-	transition: 0.2s all;
+	transition: 0.05s all;
 }
 
 .compra-curso:active {
-	transform: scale(0.96);
+	transform: scale(0.95);
 }
 
 .titulo-padrao {
