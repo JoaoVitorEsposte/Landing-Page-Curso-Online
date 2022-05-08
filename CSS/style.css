@@ -3,8 +3,10 @@
 	--bg-color-compra-curso: rgba(70,255,120, 0.795);
 	--color-compra-curso: rebeccapurple;
 	--text-color: rgb(100,180,215);
-	--bg-especial-gradiente: linear-gradient(to right, rebeccapurple, rgba(100,180,215));
+	--bg-especial-gradiente: linear-gradient(to right, #663399, rgba(100,180,215));
+	--bg-especial-gradiente-claro: linear-gradient(to right, #9966CC, rgba(130,200,235));
 	--bg-especial-gradiente-reverso: linear-gradient(to left, rebeccapurple, rgba(100,180,215));
+	--bg-especial-gradiente-claro-reverso: linear-gradient(to left, #9966CC, rgba(130,200,235));
 }
 
 body, * {
@@ -44,7 +46,7 @@ header {
 	font-size: 4em;
 	font-weight: bold;
 	position: relative;
-	width: 70%;
+	width: 75%;
 	min-height: 160px;
 	margin: 0 auto;
 	text-align: center;
@@ -79,15 +81,13 @@ main {
 	"terceiro-main"
 	"quarto-main"
 	"quinto-main";*/
-	grid-gap: 30px;
+	grid-row-gap: 70px;
 }
 
 .caixa-padrao-conteudo {
 	position: relative;
 	margin: 0 auto;
-	width: 70%;
-	height: 510px;
-	padding: 0.5em;
+	width: 75%;
 }
 
 .primeiro-main {
@@ -105,24 +105,46 @@ main {
 	height: 70px;
 	border-radius: 10px;
 	padding: 0.2em;
-	margin: 0.7em;
+	margin: 1.7em;
 	border-width: 3px;
 	color: var(--color-compra-curso);
 	font-weight: bold;
 	transition: 0.05s all;
 }
 
+.compra-curso:hover {
+	transform: scale(1.05);
+	transition: 0.9s transform;
+}
+
 .compra-curso:active {
 	transform: scale(0.95);
 }
 
+.compra-curso img {
+	width: 50px;
+	vertical-align: middle;
+}
+
 .titulo-padrao {
-	position: absolute;
-	top: 140px;
 	font-size: 2em;
-	font-weight: bold;
+	font-weight: 900;
 	text-align: justify;
 	line-height: 1.7em;
+}
+
+.especial-gradiente-claro {
+	background: var(--bg-especial-gradiente-claro);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.especial-gradiente-claro-reverso {
+	background: var(--bg-especial-gradiente-claro-reverso);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .texto-padrao {
@@ -132,11 +154,15 @@ main {
 }
 
 .texto-padrao:first-letter {
-	margin-left: 70px;
+	margin-left: 0.5em;
 }
 
 em {
 	font-style: italic;
+}
+
+b {
+	font-weight: bold;
 }
 
 .segundo-main {
@@ -144,12 +170,37 @@ em {
 }
 
 .grade-duvidas-respostas {
+	position: relative;
+	width: 75%;
+	height: 700px;
+	margin: 0 auto;
 	display: grid;
-	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas: 
+	"ast and"
+	"21 22"
+	"31 32";
+}
+
+.grade-duvidas-respostas div {
+	width: 75%;
+}
+
+.ast {
+	grid-area: ast;
+}
+
+.and {
+	grid-area: and;
 }
 
 .terceiro-main {
 	/*grid-area: terceiro-main;*/
+}
+
+.duvida-resposta {
+	width: 300px;
 }
 
 .quarto-main {
