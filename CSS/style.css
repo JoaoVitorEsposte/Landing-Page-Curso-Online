@@ -7,6 +7,11 @@
 	--bg-especial-gradiente-claro: linear-gradient(to right, #9966CC, rgba(130,200,235));
 	--bg-especial-gradiente-reverso: linear-gradient(to left, rebeccapurple, rgba(100,180,215));
 	--bg-especial-gradiente-claro-reverso: linear-gradient(to left, #9966CC, rgba(130,200,235));
+	--alinhamento-vertical-duvida-resposta: 400px;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body, * {
@@ -82,6 +87,7 @@ main {
 	"quarto-main"
 	"quinto-main";*/
 	grid-row-gap: 70px;
+	padding: 0 0 120px 0;
 }
 
 .caixa-padrao-conteudo {
@@ -129,7 +135,7 @@ main {
 .titulo-padrao {
 	font-size: 2em;
 	font-weight: 900;
-	text-align: justify;
+	text-align: center;
 	line-height: 1.7em;
 }
 
@@ -172,27 +178,11 @@ b {
 .grade-duvidas-respostas {
 	position: relative;
 	width: 75%;
-	height: 700px;
+	height: auto;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-areas: 
-	"ast and"
-	"21 22"
-	"31 32";
-}
-
-.grade-duvidas-respostas div {
-	width: 75%;
-}
-
-.ast {
-	grid-area: ast;
-}
-
-.and {
-	grid-area: and;
+	grid-template-rows: repeat(auto-fill, auto);
 }
 
 .terceiro-main {
@@ -200,11 +190,75 @@ b {
 }
 
 .duvida-resposta {
-	width: 300px;
+	width: 70%;
+	height: var(--alinhamento-vertical-duvida-resposta);
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	line-height: var(--alinhamento-vertical-duvida-resposta);
+}
+
+.duvida-resposta span {
+	vertical-align: middle;
+	display: inline-block;
+	line-height: normal;
+}
+
+.duvida-resposta h2 {
+	font-size: 1.7em;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.duvida-resposta p {
+	font-size: 1.4em;
+	margin-bottom: 1em;
+}
+
+a {
+	color: inherit;
+	text-decoration-color: inherit;
 }
 
 .quarto-main {
 	/*grid-area: quarto-main;*/
+}
+
+div.aos {
+	width: 800px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.lista-equipamentos {
+	position: relative;
+	width: 75%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.lista-equipamentos div.aos-animate, .lista-equipamentos div.aos-init {
+	width: 850px;
+}
+
+.lista-equipamentos .equipamento {
+	display: inline-block;
+	width: 75%;
+	height: auto;
+	font-size: 1.5em;
+	line-height: 2em;
+	font-weight: bold;
+}
+
+.lista-equipamentos .equipamento:after {
+ content: ";";
+}
+
+.lista-equipamentos span:nth-child(1n) {
+	background: var(--bg-especial-gradiente);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .quinto-main {
