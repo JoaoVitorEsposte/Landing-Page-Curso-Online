@@ -26,16 +26,11 @@ body {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(auto-fill, auto);
-	/**grid-template-areas: 
-	"header"
-	"main"
-	"footer";**/
 	grid-gap: 40px;
 	width: 100%;
 }
 
 header {
-	/**grid-area: header;**/
 	position: relative;
 	width: 80%;
 	height: 100%;
@@ -75,17 +70,9 @@ header {
 }
 
 main {
-	/**grid-area: main;**/
 	display: grid;
-	/**grid-template-rows: 1fr 0.7fr 3fr 1fr 3fr;**/
 	grid-template-rows: repeat(auto-fill, auto);
 	grid-template-columns: 1fr;
-	/*grid-template-areas: 
-	"primeiro-main"
-	"segundo-main"
-	"terceiro-main"
-	"quarto-main"
-	"quinto-main";*/
 	grid-row-gap: 70px;
 	padding: 0 0 120px 0;
 }
@@ -94,10 +81,6 @@ main {
 	position: relative;
 	margin: 0 auto;
 	width: 75%;
-}
-
-.primeiro-main {
-	/*grid-area: primeiro-main;*/
 }
 
 .compra-curso {
@@ -171,10 +154,6 @@ b {
 	font-weight: bold;
 }
 
-.segundo-main {
-	/**grid-area: segundo-main;*/
-}
-
 .grade-duvidas-respostas {
 	position: relative;
 	width: 75%;
@@ -183,10 +162,6 @@ b {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(auto-fill, auto);
-}
-
-.terceiro-main {
-	/*grid-area: terceiro-main;*/
 }
 
 .duvida-resposta {
@@ -218,10 +193,6 @@ b {
 a {
 	color: inherit;
 	text-decoration-color: inherit;
-}
-
-.quarto-main {
-	/*grid-area: quarto-main;*/
 }
 
 div.aos {
@@ -261,12 +232,7 @@ div.aos {
 	-webkit-text-fill-color: transparent;
 }
 
-.quinto-main {
-	/*grid-area: quinto-main;*/
-}
-
-
 
 footer {
-	/**grid-area: footer;**/
+	
 }
